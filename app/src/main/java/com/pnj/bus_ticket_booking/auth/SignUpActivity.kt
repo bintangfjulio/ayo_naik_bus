@@ -40,9 +40,6 @@ class SignUpActivity : AppCompatActivity() {
                     if(it.isSuccessful){
                         val uid = firebaseAuth.currentUser?.uid
                         addUser(uid.toString())
-
-                        val intent = Intent(this, SignInActivity::class.java)
-                        startActivity(intent)
                     }
                     else{ Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show() }
                 }
@@ -61,6 +58,10 @@ class SignUpActivity : AppCompatActivity() {
         user["email"] = binding.txtSignupEmail.text.toString()
         user["role"] = "pemesan"
 
-        firestoreDatabase.collection("user").document(uid).set(user)
+        firestoreDatabase.collection("user").document(uid).set(user).addOnSuccessListener {
+            firebaseAuth.signOut()
+            val intent = Intent(this, SignInActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
