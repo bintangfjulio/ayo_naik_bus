@@ -40,6 +40,7 @@ class SignUpActivity : AppCompatActivity() {
                     if(it.isSuccessful){
                         val uid = firebaseAuth.currentUser?.uid
                         addUser(uid.toString())
+
                         val intent = Intent(this, SignInActivity::class.java)
                         startActivity(intent)
                     }
