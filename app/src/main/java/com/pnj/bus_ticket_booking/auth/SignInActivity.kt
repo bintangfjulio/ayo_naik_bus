@@ -54,6 +54,13 @@ class SignInActivity : AppCompatActivity() {
         }
     }
 
+    override fun onResume() {
+        super.onResume()
+        if(firebaseAuth.currentUser == null){
+            firebaseAuth.signOut()
+        }
+    }
+
     private fun signin_firebase(email: String, password: String){
         if(email.isNotEmpty() && password.isNotEmpty()){
             firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener {

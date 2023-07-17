@@ -12,15 +12,20 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.*
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.ktx.storage
+import com.pnj.bus_ticket_booking.MainActivity
+import com.pnj.bus_ticket_booking.auth.SignInActivity
+import com.pnj.bus_ticket_booking.chat.ChatActivity
 import com.pnj.bus_ticket_booking.databinding.ActivityTicketBinding
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.tasks.await
 import kotlinx.coroutines.withContext
 import java.lang.Exception
+import com.pnj.bus_ticket_booking.R
 
 class TicketActivity : AppCompatActivity() {
 
@@ -30,6 +35,7 @@ class TicketActivity : AppCompatActivity() {
     private lateinit var ticketArrayList: ArrayList<Ticket>
     private lateinit var ticketAdapter: TicketAdapter
     private lateinit var db: FirebaseFirestore
+    private lateinit var firebaseAuth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -68,6 +74,25 @@ class TicketActivity : AppCompatActivity() {
 
             override fun afterTextChanged(p0: Editable?) {}
         })
+
+        binding.bottomNavigation.setOnItemSelectedListener {
+            when(it.itemId) {
+                R.id.nav_bottom_tiket -> {
+                    val intent = Intent(this, TicketActivity::class.java)
+                    startActivity(intent)
+                }
+                R.id.nav_bottom_diskusi -> {
+                    val intent = Intent(this, ChatActivity::class.java)
+                    startActivity(intent)
+                }
+                R.id.nav_bottom_logout -> {
+                    firebaseAuth.signOut()
+                    val intent = Intent(this, SignInActivity::class.java)
+                    startActivity(intent)
+                }
+            }
+            true
+        }
 
         swipeDelete()
     }

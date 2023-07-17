@@ -12,6 +12,9 @@
         android:theme="@style/Theme.Bus_ticket_booking"
         tools:targetApi="31">
         <activity
+            android:name=".chat.ChatActivity"
+            android:exported="false" />
+        <activity
             android:name=".admin.EditTicketActivity"
             android:exported="false" />
         <activity
