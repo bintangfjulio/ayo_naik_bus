@@ -1,5 +1,6 @@
 package com.pnj.bus_ticket_booking.pemesan
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -8,6 +9,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.*
 import com.pnj.bus_ticket_booking.R
+import com.pnj.bus_ticket_booking.auth.SignInActivity
+import com.pnj.bus_ticket_booking.chat.ChatActivity
 import com.pnj.bus_ticket_booking.databinding.ActivityBookingBinding
 
 class BookingActivity : AppCompatActivity() {
@@ -24,6 +27,7 @@ class BookingActivity : AppCompatActivity() {
 
         binding = ActivityBookingBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        firebaseAuth = FirebaseAuth.getInstance()
 
         bookingRecyclerView = binding.bookingListView
         bookingRecyclerView.layoutManager = LinearLayoutManager(this)
@@ -33,8 +37,30 @@ class BookingActivity : AppCompatActivity() {
         bookingAdapter = BookingAdapter(bookingArrayList)
 
         bookingRecyclerView.adapter = bookingAdapter
-
         load_data()
+
+        binding.bottomNavigation.setOnItemSelectedListener {
+            when(it.itemId) {
+                R.id.nav_bottom_tiket -> {
+                    val intent = Intent(this, CatalogActivity::class.java)
+                    startActivity(intent)
+                }
+                R.id.nav_bottom_booking -> {
+                    val intent = Intent(this, BookingActivity::class.java)
+                    startActivity(intent)
+                }
+                R.id.nav_bottom_diskusi -> {
+                    val intent = Intent(this, ChatActivity::class.java)
+                    startActivity(intent)
+                }
+                R.id.nav_bottom_logout -> {
+                    firebaseAuth.signOut()
+                    val intent = Intent(this, SignInActivity::class.java)
+                    startActivity(intent)
+                }
+            }
+            true
+        }
     }
 
     private fun load_data() {

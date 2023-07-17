@@ -20,6 +20,7 @@ class BookingAdapter(private val bookingList: ArrayList<Booking>) :
         val nama_pemilik: TextView = itemView.findViewById(R.id.TVLNamaPemilik)
         val waktu_keberangkatan: TextView = itemView.findViewById(R.id.TVLWaktuKeberangkatan)
         val img_booking : ImageView = itemView.findViewById(R.id.IMLGambarBus)
+        val jumlah_tiket: TextView = itemView.findViewById(R.id.TVLJumlahTiket)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BookingViewHolder {
@@ -30,9 +31,10 @@ class BookingAdapter(private val bookingList: ArrayList<Booking>) :
 
     override fun onBindViewHolder(holder: BookingViewHolder, position: Int) {
         val booking: Booking = bookingList[position]
-        holder.nama_tiket.text = booking.nama_tiket
-        holder.nama_pemilik.text = booking.nama_pemilik
-        holder.waktu_keberangkatan.text = booking.waktu_keberangkatan
+        holder.nama_tiket.text = "Bus: " + booking.nama_tiket
+        holder.nama_pemilik.text = "Pemesan: " + booking.nama_pemesan
+        holder.waktu_keberangkatan.text = "Jadwal: " + booking.tanggal_keberangkatan
+        holder.jumlah_tiket.text = "Jumlah: " + booking.jumlah_tiket
 
         val storageRef = FirebaseStorage.getInstance().reference.child(booking.gambar_bus.toString())
         val localfile = File.createTempFile("tempImage", "jpg")

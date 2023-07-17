@@ -33,27 +33,6 @@ class SignInActivity : AppCompatActivity() {
         }
     }
 
-    override fun onStart() {
-        super.onStart()
-        if(firebaseAuth.currentUser != null){
-            val user = firebaseAuth.currentUser
-            val uid = user?.uid
-
-            val userRef = FirebaseFirestore.getInstance().collection("user").document(uid.toString())
-            userRef.get().addOnSuccessListener { documentSnapshot ->
-                val role = documentSnapshot.getString("role").toString()
-
-                if(role == "pemesan") {
-                    val intent = Intent(this, CatalogActivity::class.java)
-                    startActivity(intent)
-                } else {
-                    val intent = Intent(this, TicketActivity::class.java)
-                    startActivity(intent)
-                }
-            }
-        }
-    }
-
     private fun signin_firebase(email: String, password: String){
         if(email.isNotEmpty() && password.isNotEmpty()){
             firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener {

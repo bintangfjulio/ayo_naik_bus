@@ -1,21 +1,11 @@
 package com.pnj.bus_ticket_booking.pemesan
 
-import android.app.Activity
-import android.app.DatePickerDialog
 import android.content.Intent
-import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.MediaStore
-import android.util.Log
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.storage.FirebaseStorage
-import com.pnj.bus_ticket_booking.R
-import com.pnj.bus_ticket_booking.admin.TicketActivity
 import com.pnj.bus_ticket_booking.databinding.ActivityAddBookingBinding
-import com.pnj.bus_ticket_booking.databinding.ActivityAddTicketBinding
-import java.text.SimpleDateFormat
 import java.util.*
 
 class AddBookingActivity : AppCompatActivity() {
@@ -28,6 +18,7 @@ class AddBookingActivity : AppCompatActivity() {
 
         binding = ActivityAddBookingBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        firebaseAuth = FirebaseAuth.getInstance()
 
         binding.BtnAddBooking.setOnClickListener {
             addBooking()
@@ -52,7 +43,6 @@ class AddBookingActivity : AppCompatActivity() {
 
         val user = firebaseAuth.currentUser
         val uid = user?.uid
-        Log.e("Uid", uid!!)
 
         firestoreDatabase.collection("user").document(uid.toString()).collection("booking").add(booking)
             .addOnSuccessListener {

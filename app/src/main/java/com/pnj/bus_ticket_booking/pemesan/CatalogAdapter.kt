@@ -53,7 +53,7 @@ RecyclerView.Adapter<CatalogAdapter.CatalogViewHolder>() {
         holder.itemView.setOnClickListener{
             activity = it.context as AppCompatActivity
             activity.startActivity(Intent(activity, AddBookingActivity::class.java).apply {
-                putExtra("nama_bus", catalog.nama_bus.toString())
+                putExtra("nama_tiket", catalog.nama_bus.toString())
                 putExtra("tanggal_keberangkatan", catalog.tanggal_keberangkatan.toString())
                 putExtra("gambar_bus", catalog.gambar_bus.toString())
             })

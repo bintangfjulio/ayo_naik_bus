@@ -16,8 +16,6 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.*
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.ktx.storage
-import com.pnj.bus_ticket_booking.MainActivity
-import com.pnj.bus_ticket_booking.auth.SignInActivity
 import com.pnj.bus_ticket_booking.chat.ChatActivity
 import com.pnj.bus_ticket_booking.databinding.ActivityTicketBinding
 import kotlinx.coroutines.Dispatchers
@@ -26,6 +24,7 @@ import kotlinx.coroutines.tasks.await
 import kotlinx.coroutines.withContext
 import java.lang.Exception
 import com.pnj.bus_ticket_booking.R
+import com.pnj.bus_ticket_booking.auth.SignInActivity
 
 class TicketActivity : AppCompatActivity() {
 
@@ -42,6 +41,8 @@ class TicketActivity : AppCompatActivity() {
 
         binding = ActivityTicketBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        firebaseAuth = FirebaseAuth.getInstance()
 
         ticketRecyclerView = binding.ticketListView
         ticketRecyclerView.layoutManager = LinearLayoutManager(this)
@@ -86,7 +87,9 @@ class TicketActivity : AppCompatActivity() {
                     startActivity(intent)
                 }
                 R.id.nav_bottom_logout -> {
-
+                    firebaseAuth.signOut()
+                    val intent = Intent(this, SignInActivity::class.java)
+                    startActivity(intent)
                 }
             }
             true

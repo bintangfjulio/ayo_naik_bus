@@ -6,19 +6,12 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
-import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
-import androidx.lifecycle.lifecycleScope
-import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.*
 import com.pnj.bus_ticket_booking.R
-import com.pnj.bus_ticket_booking.admin.AddTicketActivity
-import com.pnj.bus_ticket_booking.admin.Ticket
-import com.pnj.bus_ticket_booking.admin.TicketActivity
-import com.pnj.bus_ticket_booking.admin.TicketAdapter
+import com.pnj.bus_ticket_booking.auth.SignInActivity
 import com.pnj.bus_ticket_booking.chat.ChatActivity
 import com.pnj.bus_ticket_booking.databinding.ActivityCatalogBinding
 
@@ -37,6 +30,7 @@ class CatalogActivity : AppCompatActivity() {
 
         binding = ActivityCatalogBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        firebaseAuth = FirebaseAuth.getInstance()
 
         catalogRecyclerView = binding.ticketListView
         catalogRecyclerView.layoutManager = LinearLayoutManager(this)
@@ -72,7 +66,7 @@ class CatalogActivity : AppCompatActivity() {
                     startActivity(intent)
                 }
                 R.id.nav_bottom_booking -> {
-                    val intent = Intent(this, CatalogActivity::class.java)
+                    val intent = Intent(this, BookingActivity::class.java)
                     startActivity(intent)
                 }
                 R.id.nav_bottom_diskusi -> {
@@ -80,13 +74,13 @@ class CatalogActivity : AppCompatActivity() {
                     startActivity(intent)
                 }
                 R.id.nav_bottom_logout -> {
-
+                    firebaseAuth.signOut()
+                    val intent = Intent(this, SignInActivity::class.java)
+                    startActivity(intent)
                 }
             }
             true
         }
-
-
     }
 
     private fun load_data() {
