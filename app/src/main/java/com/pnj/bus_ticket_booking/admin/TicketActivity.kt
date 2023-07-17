@@ -86,9 +86,7 @@ class TicketActivity : AppCompatActivity() {
                     startActivity(intent)
                 }
                 R.id.nav_bottom_logout -> {
-                    firebaseAuth.signOut()
-                    val intent = Intent(this, SignInActivity::class.java)
-                    startActivity(intent)
+
                 }
             }
             true
