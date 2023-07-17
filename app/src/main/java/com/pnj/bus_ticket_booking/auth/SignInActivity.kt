@@ -6,8 +6,9 @@ import android.os.Bundle
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import com.pnj.bus_ticket_booking.admin.TicketActivity
 import com.pnj.bus_ticket_booking.databinding.ActivitySignInBinding
-import com.pnj.bus_ticket_booking.pemesan.PemesanActivity
+import com.pnj.bus_ticket_booking.pemesan.CatalogActivity
 
 class SignInActivity : AppCompatActivity() {
 
@@ -43,7 +44,10 @@ class SignInActivity : AppCompatActivity() {
                 val role = documentSnapshot.getString("role").toString()
 
                 if(role == "pemesan") {
-                    val intent = Intent(this, PemesanActivity::class.java)
+                    val intent = Intent(this, CatalogActivity::class.java)
+                    startActivity(intent)
+                } else {
+                    val intent = Intent(this, TicketActivity::class.java)
                     startActivity(intent)
                 }
             }
@@ -62,7 +66,10 @@ class SignInActivity : AppCompatActivity() {
                         val role = documentSnapshot.getString("role").toString()
 
                         if(role == "pemesan") {
-                            val intent = Intent(this, PemesanActivity::class.java)
+                            val intent = Intent(this, CatalogActivity::class.java)
+                            startActivity(intent)
+                        } else {
+                            val intent = Intent(this, TicketActivity::class.java)
                             startActivity(intent)
                         }
                     }

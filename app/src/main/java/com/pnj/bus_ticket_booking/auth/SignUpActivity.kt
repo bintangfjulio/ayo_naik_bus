@@ -22,7 +22,7 @@ class SignUpActivity : AppCompatActivity() {
         binding.btnSignup.setOnClickListener {
             val email = binding.txtSignupEmail.text.toString()
             val password = binding.txtSignupPass.text.toString()
-            val confirm_password = binding.txtSignupPass.text.toString()
+            val confirm_password = binding.txtConfirmSignupPass.text.toString()
 
             signup_firebase(email, password, confirm_password)
         }
