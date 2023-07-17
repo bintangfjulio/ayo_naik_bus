@@ -44,9 +44,9 @@
                 android:text="Nama Tiket"
                 android:id="@+id/TVLNamaTiket"
                 android:textColor="@color/white"
-                android:textSize="18dp"
+                android:textSize="16dp"
                 android:textStyle="bold"
-                android:layout_marginBottom="12dp"/>
+                android:layout_marginBottom="8dp"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -55,13 +55,23 @@
                 android:id="@+id/TVLNamaPemilik"
                 android:textColor="@color/white"
                 android:textSize="16dp"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Jumlah Tiket"
+                android:id="@+id/TVLJumlahTiket"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Waktu Keberangkatan"
-                android:layout_marginVertical="12dp"
                 android:id="@+id/TVLWaktuKeberangkatan"
                 android:textColor="@color/white"
                 android:textSize="16dp"
