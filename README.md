@@ -28,10 +28,8 @@ Aplikasi ini dibuat dengan menggunakan Tools [IDE Android Studio](https://develo
 <div align="center">
   <img align="left" src="https://github.com/bintangfjulio/bus_ticket_booking/blob/dwiki/app/src/main/res/drawable/logo%20android%20studio.png" height="180" width="180"></img>
   <img align="right" src="https://github.com/bintangfjulio/bus_ticket_booking/blob/dwiki/app/src/main/res/drawable/logo%20firebase.png" height="180" width="180"></img>
-
-  </div>
-
-
+</div>
+  
 # Fitur
 
 Berikut adalah daftar fitur-fitur yang terdapat pada prototype ini
