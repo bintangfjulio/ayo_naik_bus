@@ -26,8 +26,8 @@ Aplikasi ini diperuntukkan untuk 2 role pengguna yaitu admin tiket bis dan pemes
 Aplikasi ini dibuat dengan menggunakan Tools [IDE Android Studio](https://developer.android.com/studio) dan menggunakan bahasa kotlin, serta menggunakan [Google Cloud Storage (Google Cloud Firestore Platform)](https://firebase.google.com/)
 <br><br>
 <div align="center">
-  <img align="left" src="https://github.com/bintangfjulio/bus_ticket_booking/blob/dwiki/app/src/main/res/drawable/logo%20android%20studio.png" height="180" width="180"></img>
-  <img align="right" src="https://github.com/bintangfjulio/bus_ticket_booking/blob/dwiki/app/src/main/res/drawable/logo%20firebase.png" height="180" width="180"></img>
+  <img src="https://github.com/bintangfjulio/bus_ticket_booking/blob/dwiki/app/src/main/res/drawable/logo%20android%20studio.png" height="180" width="180"></img>
+  <img src="https://github.com/bintangfjulio/bus_ticket_booking/blob/dwiki/app/src/main/res/drawable/logo%20firebase.png" height="180" width="180"></img>
 </div>
   
 # Fitur
