@@ -1,7 +1,10 @@
 
 # Ayo Naik Bus | Aplikasi Pemesanan Tiket Bus
+
+
+
 <div align="center">
-  <img align="center" src="https://github.com/Bagus324/marketplace_perikanan/blob/master/app/src/main/res/drawable/logo.png"></img>
+  <img align="center" src="https://github.com/bintangfjulio/bus_ticket_booking/blob/main/app/src/main/res/drawable/bus.png"></img>
   </div>
 
 # Tentang Aplikasi
@@ -13,9 +16,9 @@ Aplikasi ini diperuntukkan untuk 2 role pengguna yaitu admin tiket bis dan pemes
 
 | Name                                    | Student-ID  |  Contacts                                                                                                                  |
 | :-------------------------------------- | :---------- |  :------------------------------------------------------------------------------------------------------------------------ |
-| Akmal Maulana                           | 2007411050  |  [GitHub](https://github.com/akmalm007)                                                                       |
-| Bagus Tri Yulianto Darmawan             | 2007411056  |  [GitHub](https://github.com/Bagus324)                                            |
-| Muhammad Ilham Faclevi                  | 2007411048  |  [GitHub](https://github.com/ilhamfachlevi)                                                            |
+| Bintang Fajar Julio                           | 2007411033  |  [GitHub](https://github.com/bintangfjulio)                 |
+| Muhammad Bintang Syawal                       | 2007411040  |  [GitHub](https://github.com/MBintangS)                     |
+| Muhamad Dwiki Hermansyah                      | 2007411054  |  [GitHub](https://github.com/mdwikihermansyah)              |
 
 
 # Tools
@@ -23,15 +26,15 @@ Aplikasi ini diperuntukkan untuk 2 role pengguna yaitu admin tiket bis dan pemes
 Aplikasi ini dibuat dengan menggunakan Tools [IDE Android Studio](https://developer.android.com/studio) dan menggunakan [Google Cloud Storage (Google Cloud Firestore Platform)](https://firebase.google.com/)
 <br><br>
 <div align="center">
-  <img align="left" src="https://github.com/Bagus324/marketplace_perikanan/blob/master/readme%20assets/android-studio-icon-486x512-zp9um7zl.png" height="180" width="180"></img>
-  <img align="right" src="https://github.com/Bagus324/marketplace_perikanan/blob/master/readme%20assets/firestore-logo.png" height="180" width="180"></img>
+  <img align="left" src="https://github.com/bintangfjulio/bus_ticket_booking/blob/dwiki/app/src/main/res/drawable/logo%20android%20studio.png" height="180" width="180"></img>
+  <img align="right" src="https://github.com/bintangfjulio/bus_ticket_booking/blob/dwiki/app/src/main/res/drawable/logo%20firebase.png" height="180" width="180"></img>
 
   </div>
 <br><br><br><br><br><br><br><br>
 
 Aplikasi ini juga dibuat menggunakan Bahasa Pemrograman [Kotlin](https://kotlinlang.org/)
 <div align="center">
-  <img align="center" src="https://github.com/Bagus324/marketplace_perikanan/blob/master/readme%20assets/kotlin_avatar_removebg.png" height="180" width="180"></img>
+  <img align="center" src="https://github.com/bintangfjulio/bus_ticket_booking/blob/dwiki/app/src/main/res/drawable/logo%20kotlin.png" height="180" width="180"></img>
 
   </div>
 
@@ -39,43 +42,40 @@ Aplikasi ini juga dibuat menggunakan Bahasa Pemrograman [Kotlin](https://kotlinl
 
 Berikut adalah daftar fitur-fitur yang terdapat pada prototype ini
 
-## Pembeli
+## Auth
 - [x] Login
-- [x] Register
-- [x] Search ikan-ikan yang dijual berdasarkan nama ikan pada Home Page
-- [x] Keranjang (tambah ke keranjang, hapus dari keranjang, beli ikan dari keranjang)
-- [x] Checkout All (Membeli semua ikan-ikan yang sudah dimasukkan ke keranjang)
-- [x] Riwayat perbelanjaan (Diurutkan berdasarkan waktu pembelian)
-- [x] Membeli ikan satu persatu (Ikan yang dibeli dipilih dari daftar ikan yang terdapat pada Home Page)
-- [x] Mengganti Password
-- [x] Chat
+- [x] Register (sebagai admin/user)
+
+## Admin
+- [x] Search tiket bus yang sudah ditambahkan pada Home Page
+- [x] Menampilkan list tiket
+- [x] Menambahkan Tiket baru (Nama Bus, Jumlah Kursi, Harga Tiket, Tujuan, Tanggal Keberangkatan, Gambar Bus)
+- [x] Menampilkan list tiket terbaru
+- [x] Admin dapat menghapus, edit data tiket yang sudah tersedia
+- [x] Chat dengan pengguna (broadcast)
+- [x] Logout
 
       
-## Penjual
-- [x] Login
-- [x] Search ikan-ikan yang dijual berdasarkan nama ikan (sebagai pembeli dan penjual)
-- [x] Menambah jenis ikan yang dijual (Penjual meng-input data ikan yang dibutuhkan)*
-- [x] Mengganti data ikan (Penjual meng-input data baru untuk ikan yang sudah ada)*
-- [x] Menghapus data ikan (Penjual menghapus data ikan yang sudah tidak dijual lagi)*
-- [x] Mengganti Password
+## Pemesan
+- [x] Search tiket bus yang sudah ditambahkan pada Home Page
+- [x] Melihat list tiket yang tersedia
+- [x] Mememsan tiket yang tersedia
+- [x] Memasukkan data diri (Nama pemesan, Jumlah Kursi)
+- [x] Melihat list pesanan tiket yang sudah ditambahkan
+- [x] Chat dengan admin (broadcast)
+- [x] Logout
 
-## Fitur lain
-- [x] Sistem pencegahan untuk user (pembeli) memiliki akun admin (penjual)**
-
-## Fitur yang belum terealisasi
-- [ ] Pembeli mengganti jumlah ikan yang ingin dibeli pada keranjangnya
 
 # Apk File Download
 
-APK prototype ini dapat di unduh pada link 
-<b>[disini](https://s.pnj.ac.id/sakana_mawada_warohma)</b> atau di Release pada Repository ini
+APK prototype ini dapat di unduh pada link https://github.com/bintangfjulio/bus_ticket_booking/releases/tag/0.0.0 dari Release Repository ini
 
 # Note
 <div align="left">
-  <p>* : Data ikan terdiri dari<p>&nbsp;&nbsp;• Nama Ikan</p><p>&nbsp;&nbsp;• Harga Ikan</p><p>&nbsp;&nbsp;• Deskripsi Tentang Ikan</p><p>&nbsp;&nbsp;• Stok Ikan</p></p>
-  <p>** : Fitur login pada aplikasi ini menggunakan email*password, admin dan user memiliki domain email yang berbeda, dan jika user mencoba melakukan register menggunakan domail email admin, maka akan dicegah oleh sistem. Maka dari itu juga pendaftaran admin harus dilakukan manual melalui databse oleh orang dengan otoritas lebih tinggi (Super User)</p>
+  <p>* : Data ikan terdiri dari<p>&nbsp;&nbsp;• Nama Pemilik Bus</p><p>&nbsp;&nbsp;• Nama Pemesan</p><p>&nbsp;&nbsp;• Harga Tiket</p><p>&nbsp;&nbsp;• Jumlah Kursi/Tiket</p><p>&nbsp;&nbsp;• Tujuan</p><p>&nbsp;&nbsp;• Waktu Keberangkatan</p><p>&nbsp;&nbsp;• Harga Tiket</p></p>
+  <p>** : Fitur login pada aplikasi ini menggunakan email*password, admin dan user memiliki domain email yang berbeda. Maka akan dialihkan ke halaman yang berbeda (sesuai dengan autorisasi pengguna) </p>
   </div>
 <br><br><br><br><br><br>
 <div align="right">
-  <small>18 Juli 2023 - 03:25 README.md initialized by Bagus Tri Yulianto Darmawan</small>  
+  <small>18 Juli 2023 - 03:25 README.md initialized by Muhamad Dwiki Hermansyah</small>  
 </div>
