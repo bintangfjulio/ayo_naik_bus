@@ -11,7 +11,17 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="@drawable/background_bus">
+        android:background="@drawable/ic_launcher_background">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:gravity="center"
+            android:text="List Tiket Mu"
+            android:textColor="@color/blue"
+            android:textSize="17dp"
+            android:textStyle="bold" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/booking_list_view"
@@ -19,6 +29,7 @@
             android:paddingTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
             tools:listitem="@layout/booking_list_layout"
            />
 
@@ -31,6 +42,7 @@
         android:layout_alignParentBottom="true"
         android:background="@android:color/white"
         app:menu="@menu/menu2_bootom"
+
         app:elevation="0dp" />
 
 </RelativeLayout>

@@ -5,8 +5,8 @@
         android:icon="@drawable/baseline_directions_bus_24"
         android:id="@+id/nav_bottom_tiket"/>
     <item
-        android:icon="@drawable/baseline_bookmark_border_24"
         android:id="@+id/nav_bottom_booking"
+        android:icon="@drawable/baseline_bookmark_border_24"
         android:title="Booking"/>
     <item
         android:id="@+id/nav_bottom_diskusi"
