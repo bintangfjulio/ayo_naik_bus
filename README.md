@@ -28,7 +28,6 @@ Aplikasi ini dibuat dengan menggunakan Tools [IDE Android Studio](https://develo
 <div align="center">
   <img align="left" src="https://github.com/bintangfjulio/bus_ticket_booking/blob/dwiki/app/src/main/res/drawable/logo%20android%20studio.png" height="180" width="180"></img>
   <img align="right" src="https://github.com/bintangfjulio/bus_ticket_booking/blob/dwiki/app/src/main/res/drawable/logo%20firebase.png" height="180" width="180"></img>
-    <img align="center" src="https://github.com/bintangfjulio/bus_ticket_booking/blob/dwiki/app/src/main/res/drawable/logo%20kotlin.png" height="180" width="180" placeholder="kotlin"></img>
 
   </div>
 
@@ -67,7 +66,7 @@ APK prototype ini dapat di unduh pada link https://github.com/bintangfjulio/bus_
 
 # Note
 <div align="left">
-  <p>* : Data ikan terdiri dari<p>&nbsp;&nbsp;• Nama Pemilik Bus</p><p>&nbsp;&nbsp;• Nama Pemesan</p><p>&nbsp;&nbsp;• Harga Tiket</p><p>&nbsp;&nbsp;• Jumlah Kursi/Tiket</p><p>&nbsp;&nbsp;• Tujuan</p><p>&nbsp;&nbsp;• Waktu Keberangkatan</p><p>&nbsp;&nbsp;• Harga Tiket</p></p>
+  <p>* : Data tiket terdiri dari<p>&nbsp;&nbsp;• Nama Pemilik Bus</p><p>&nbsp;&nbsp;• Nama Pemesan</p><p>&nbsp;&nbsp;• Harga Tiket</p><p>&nbsp;&nbsp;• Jumlah Kursi/Tiket</p><p>&nbsp;&nbsp;• Tujuan</p><p>&nbsp;&nbsp;• Waktu Keberangkatan</p><p>&nbsp;&nbsp;• Harga Tiket</p></p>
   <p>** : Fitur login pada aplikasi ini menggunakan email*password, admin dan user memiliki domain email yang berbeda. Maka akan dialihkan ke halaman yang berbeda (sesuai dengan autorisasi pengguna) </p>
   </div>
 <br><br><br><br><br><br>
