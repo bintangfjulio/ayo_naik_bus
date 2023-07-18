@@ -1,15 +1,8 @@
 
 # Ayo Naik Bus | Aplikasi Pemesanan Tiket Bus
 
-
-
-<div align="center">
-  <img align="center" src="https://github.com/bintangfjulio/bus_ticket_booking/blob/main/app/src/main/res/drawable/bus.png"></img>
-  </div>
-
-
 # Video Pengenalan Aplikasi
-[<img src="https://github.com/bintangfjulio/bus_ticket_booking/blob/main/app/src/main/res/drawable/bus.png" width="50%">](https://www.youtube.com/watch?v=u2j8k4-iXo4 "Sekarang di Android: 55")
+[<img align="center" src="https://github.com/bintangfjulio/bus_ticket_booking/blob/main/app/src/main/res/drawable/bus.png" >](https://www.youtube.com/watch?v=u2j8k4-iXo4 "Sekarang di Android: 55")
 
 # Tentang Aplikasi
 
