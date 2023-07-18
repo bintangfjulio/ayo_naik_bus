@@ -10,7 +10,7 @@
 
 # Video Pengenalan Aplikasi
 [![Sekarang di Android: 55] // Judul 
-([https://github.com/bintangfjulio/bus_ticket_booking/blob/main/app/src/main/res/drawable/bus.png]// Thumbnail 
+(https://github.com/bintangfjulio/bus_ticket_booking/blob/main/app/src/main/res/drawable/bus.png)] // Thumbnail 
 (https://www.youtube.com/watch?v=u2j8k4-iXo4 "Sekarang di Android: 55") // Tautan Video
 
 # Tentang Aplikasi
