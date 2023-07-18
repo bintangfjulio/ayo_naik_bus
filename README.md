@@ -7,6 +7,12 @@
   <img align="center" src="https://github.com/bintangfjulio/bus_ticket_booking/blob/main/app/src/main/res/drawable/bus.png"></img>
   </div>
 
+
+# Video Pengenalan Aplikasi
+[![Sekarang di Android: 55] // Judul 
+([https://i.ytimg.com/vi/Hc79sDi3f0U/maxresdefault.jpg](https://github.com/bintangfjulio/bus_ticket_booking/blob/main/app/src/main/res/drawable/bus.png))] // Thumbnail 
+(https://www.youtube.com/watch?v=u2j8k4-iXo4 "Sekarang di Android: 55") // Tautan Video
+
 # Tentang Aplikasi
 
 Aplikasi ini diperuntukkan untuk 2 role pengguna yaitu admin tiket bis dan pemesan tiket bis. Admin tiket bis dapat melakukan Create, Read, Update, and Delete tiket bis untuk dipesan dilengkapi dengan gambar bis dari tiket tersebut sedangkan pemesan tiket dapat melakukan Create & Read untuk pemesanan tiket bis yang sudah disediakan. Para pengguna dapat berdiskusi pada forum yang disediakan. Admin dan pemesan tiket harus melakukan login akun apabila ingin mengakses aplikasi yang mana pemesan tiket harus mendaftar apabila belum memiliki akun untuk login.
