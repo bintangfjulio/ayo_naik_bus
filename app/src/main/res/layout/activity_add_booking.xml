@@ -10,8 +10,18 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/tiketbus"
+        >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="200dp">
+        android:layout_marginTop="200dp"
+
+        >
 
         <TextView
             android:layout_width="match_parent"
@@ -20,7 +30,7 @@
             android:gravity="center"
             android:text="Masukkan Data Booking"
             android:textColor="@color/blue"
-            android:textSize="17dp"
+            android:textSize="25dp"
             android:textStyle="bold" />
 
         <com.google.android.material.textfield.TextInputLayout
@@ -79,9 +89,11 @@
             android:layout_marginHorizontal="15dp"
             android:backgroundTint="@color/blue"
             android:text="Tambah Booking"
+            android:textStyle="bold"
             android:layout_marginBottom="30dp"
             android:textColor="#fff" />
 
+    </LinearLayout>
     </LinearLayout>
 
 </ScrollView>

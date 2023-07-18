@@ -27,7 +27,7 @@ class CatalogActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        //inisiasi objek
         binding = ActivityCatalogBinding.inflate(layoutInflater)
         setContentView(binding.root)
         firebaseAuth = FirebaseAuth.getInstance()
@@ -41,6 +41,7 @@ class CatalogActivity : AppCompatActivity() {
 
         catalogRecyclerView.adapter = catalogAdapter
 
+        //memangil data tiket dari firestore
         load_data()
 
         binding.txtSearchTiket.addTextChangedListener(object: TextWatcher {
@@ -49,6 +50,7 @@ class CatalogActivity : AppCompatActivity() {
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
                 val keyword = binding.txtSearchTiket.text.toString()
                 if (keyword.isNotEmpty()){
+                    //keyword dari search data
                     search_data(keyword)
                 }
                 else{
@@ -83,24 +85,25 @@ class CatalogActivity : AppCompatActivity() {
         }
     }
 
+    //mengambil data tiket dari Firestore dan menampilkannya dalam catalogRecyclerView
     private fun load_data() {
         catalogArrayList.clear()
-        db = FirebaseFirestore.getInstance()
+        db = FirebaseFirestore.getInstance() //akses layanan firebasestore
         db.collection("tiket").
         addSnapshotListener(object: EventListener<QuerySnapshot> {
             override fun onEvent(
                 value: QuerySnapshot?,
                 error: FirebaseFirestoreException?
             ) {
-                if(error != null){
+                if(error != null){ //mengecek saat ada kesalahan data dari firestore
                     Log.e("Firestore Error", error.message.toString())
                     return
                 }
                 for(dc: DocumentChange in value?.documentChanges!!){
                     if(dc.type == DocumentChange.Type.ADDED)
-                        catalogArrayList.add(dc.document.toObject(Catalog::class.java))
+                        catalogArrayList.add(dc.document.toObject(Catalog::class.java)) //toObject(Catalog::class.java mengkonversi data menjadi objek
                 }
-                catalogAdapter.notifyDataSetChanged()
+                catalogAdapter.notifyDataSetChanged()//konfirmasi
             }
         })
     }

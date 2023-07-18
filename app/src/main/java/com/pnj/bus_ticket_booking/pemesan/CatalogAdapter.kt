@@ -17,9 +17,11 @@ import java.io.File
 
 class CatalogAdapter (private val catalogList: ArrayList<Catalog>) :
 RecyclerView.Adapter<CatalogAdapter.CatalogViewHolder>() {
+    //inisiasi variabel
     private lateinit var activity: AppCompatActivity
 
     class CatalogViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        //referensi elemen yang terdaoat pada layout ticket list laout
         val nama_bus: TextView = itemView.findViewById(R.id.TVLNamaBus)
         val harga: TextView = itemView.findViewById(R.id.TVLHarga)
         val tujuan: TextView = itemView.findViewById(R.id.TVLTujuan)
@@ -29,11 +31,14 @@ RecyclerView.Adapter<CatalogAdapter.CatalogViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CatalogViewHolder {
         val itemView = LayoutInflater.from(parent.context)
+                //nflate layout item tiket (ticket_list_layout)
             .inflate(R.layout.ticket_list_layout, parent, false)
+        //kembalikan
         return CatalogViewHolder(itemView)
     }
 
     override fun onBindViewHolder(holder: CatalogViewHolder, position: Int) {
+        //mengambil data dari catalog List
         val catalog: Catalog = catalogList[position]
         holder.nama_bus.text = "Bus: " + catalog.nama_bus
         holder.harga.text = "Harga: " +catalog.harga
